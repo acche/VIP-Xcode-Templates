@@ -1,0 +1,15 @@
+XCODE_USER_TEMPLATES_DIR=~/Library/Developer/Xcode/Templates/File\ Templates
+XCODE_USER_SNIPPETS_DIR=~/Library/Developer/Xcode/UserData/CodeSnippets
+
+TEMPLATES_DIR1=Clean\ Swift\ iOS
+TEMPLATES_DIR2=Clean\ Swift\ macOS
+
+install_templates:
+	mkdir -p $(XCODE_USER_TEMPLATES_DIR)
+	rm -fR $(XCODE_USER_TEMPLATES_DIR)/$(TEMPLATES_DIR1)
+	cp -R $(TEMPLATES_DIR1) $(XCODE_USER_TEMPLATES_DIR)
+	rm -fR $(XCODE_USER_TEMPLATES_DIR)/$(TEMPLATES_DIR2)
+	cp -R $(TEMPLATES_DIR2) $(XCODE_USER_TEMPLATES_DIR)
+
+uninstall_templates:
+	rm -fR $(XCODE_USER_TEMPLATES_DIR)/$(TEMPLATES_DIR)
