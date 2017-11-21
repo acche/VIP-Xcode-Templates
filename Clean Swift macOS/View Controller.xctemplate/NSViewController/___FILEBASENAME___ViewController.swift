@@ -17,7 +17,7 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class
   func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic
+class ___VARIABLE_sceneName___ViewController: NSViewController, ___VARIABLE_sceneName___DisplayLogic
 {
   var interactor: ___VARIABLE_sceneName___BusinessLogic?
   var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
@@ -54,7 +54,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_scen
   
   // MARK: Routing
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  override func prepare(for segue: NSStoryboardSegue, sender: Any?)
   {
     if let scene = segue.identifier {
       let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
