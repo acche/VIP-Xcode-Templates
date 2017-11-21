@@ -10,7 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Cocoa
 
 protocol ___VARIABLE_sceneName___PresentationLogic
 {

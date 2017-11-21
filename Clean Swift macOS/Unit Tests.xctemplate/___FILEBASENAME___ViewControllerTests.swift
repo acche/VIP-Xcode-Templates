@@ -18,14 +18,14 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase
   // MARK: Subject under test
   
   var sut: ___VARIABLE_sceneName___ViewController!
-  var window: UIWindow!
+  var window: NSWindow!
   
   // MARK: Test lifecycle
   
   override func setUp()
   {
     super.setUp()
-    window = UIWindow()
+    window = NSWindow()
     setup___VARIABLE_sceneName___ViewController()
   }
   
