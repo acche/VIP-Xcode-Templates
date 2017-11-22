@@ -12,18 +12,15 @@
 
 import Cocoa
 
-@objc protocol ___VARIABLE_sceneName___RoutingLogic
-{
+@objc protocol ___VARIABLE_sceneName___RoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol ___VARIABLE_sceneName___DataPassing
-{
+protocol ___VARIABLE_sceneName___DataPassing {
   var dataStore: ___VARIABLE_sceneName___DataStore? { get }
 }
 
-class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing
-{
+class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
   weak var viewController: ___VARIABLE_sceneName___ViewController?
   var dataStore: ___VARIABLE_sceneName___DataStore?
   
