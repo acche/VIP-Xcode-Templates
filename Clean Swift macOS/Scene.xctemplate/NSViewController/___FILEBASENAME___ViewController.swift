@@ -17,17 +17,17 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class
   func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
 }
 
-class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_sceneName___DisplayLogic
+class ___VARIABLE_sceneName___ViewController: NSViewController, ___VARIABLE_sceneName___DisplayLogic
 {
   var interactor: ___VARIABLE_sceneName___BusinessLogic?
   var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
 
   // MARK: Object lifecycle
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+  override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?)
   {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
   }
   
   required init?(coder aDecoder: NSCoder)
@@ -54,7 +54,7 @@ class ___VARIABLE_sceneName___ViewController: UIViewController, ___VARIABLE_scen
   
   // MARK: Routing
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  override func prepare(for segue: NSStoryboardSegue, sender: Any?)
   {
     if let scene = segue.identifier {
       let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")

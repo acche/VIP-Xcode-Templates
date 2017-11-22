@@ -52,7 +52,7 @@
 			<key>Description</key>
 			<string>What view controller class to subclass for the new scene</string>
 			<key>FallbackHeader</key>
-			<string>#import &lt;UIKit/UIKit.h&gt;</string>
+			<string>#import &lt;Cocoa/Cocoa.h&gt;</string>
 			<key>Identifier</key>
 			<string>viewControllerSubclass</string>
 			<key>Name</key>
@@ -66,7 +66,6 @@
 			<key>Values</key>
 			<array>
 				<string>NSViewController</string>
-				<string>NSWindowController</string>
 			</array>
 		</dict>
 	</array>
